@@ -1,0 +1,374 @@
+// The following two lines import the default Sencha Touch theme. If you are building
+// a new theme, remove them and the add your own CSS on top of the base CSS (which
+// is already included in your app.json file).
+@import 'sencha-touch/default';
+@import 'sencha-touch/default/all';
+
+// Custom code goes here..
+
+// Examples of using the icon mixin:
+
+
+
+calcnav {
+	padding: 0;
+}
+.calcnav .x-scroll-container {
+	@include background-gradient(#111, matte);
+}
+.x-picker {
+	@include background-gradient(#111, matte);
+}
+.x-segmentedbutton {
+	width: 99%;
+}
+.x-segmentedbutton .x-button {
+	width: 50%;
+}
+.x-field-select .x-component-outer::before {
+	background: transparent;
+}
+.x-toolbar-sencha .x-title {
+    text-shadow: 0 1px 0 rgba(0,0,0,.8);
+}
+.x-selectmark-base, .x-field-select .x-component-outer::after {
+	top: 42%;
+}
+.x-spinner .x-spinner-button {
+	width: 1.5em;
+	padding: .1em 0 0em;
+	height: 1.5em;
+}
+
+// Start styles
+body {
+	background: darken($base-color, 40);
+}
+.x-toolbar-dark.x-docked-top {
+	border-bottom: .2em solid;
+	border-bottom-color: #DC0002;
+}
+.x-field-search .x-field-input .x-form-field {
+    margin-left: 1.2em;
+}
+.searchField {
+	-webkit-box-flex: 1;
+}
+.x-list-normal .x-list-header {
+	color: #666;
+	
+	em {
+		font-weight: bold;
+		color: #000;
+	}
+}
+.x-list-normal .x-list-item .x-list-item-label {
+	border-top: 1px solid #fff;
+	border-bottom: 1px solid darken(#eaeaea, 5);
+	@include background-gradient(#fff, matte);
+	padding: 0.65em 0.5em;
+}
+.x-form-fieldset {
+	margin: 0 0 .2em;
+}
+.x-form-fieldset-title {
+	margin: 1em 0.3em 0.3em;
+}
+.list-empty-text {
+	padding: 0.8em;
+	
+	p {
+		border-radius: 0.4em;
+		border: 1px solid #ddd;
+		padding: 0.65em 0.8em;
+		background: #fff;
+		margin: 5px 0 12px;
+	}
+}
+.jwTabs {
+	.x-tabbar-inner {
+		background: url(/resources/images/logo.png) no-repeat 10px 50%;
+		background-size: auto 2.5em;
+	}
+}
+.about {
+	.content {
+		//padding: 10px;
+		//font-size: 90%;
+		//line-height: 131%;
+		
+		p {
+			//margin: 15px 0;
+		}
+		
+		img {
+			/*float: left;
+			border: 1px solid #CCC;
+			padding: 6px;
+			background: white;
+			margin: 0 15px 15px 0;
+			width: 50%;*/
+			width: 100%;
+		}
+	}
+}
+
+.contact {
+	//line-height: 23px;
+	//color: #666;
+	background-image: url(../images/list-arrow.png);
+	background-repeat: no-repeat;
+	background-position: 100% 50%;
+	background-size: 10px 14px;
+	padding: 0 2em 0 0;
+	
+	.avatar {
+		width: 40px;
+		height: 40px;
+	}
+	
+	.city {
+		font-weight: bold;
+		display: block;
+	}
+	.program {
+		font-size: 90%;
+		color: #999;
+	}
+	.avatar-hp {
+		background-image: url(/resources/icons/icon-horsepower@144.png);
+	}
+	
+	.avatar-date {
+		background-image: url(/resources/icons/icon-date@144.png);		
+	}
+	
+	.avatar-weymouth {
+		background-image: url(/resources/icons/icon-weymouth@144.png);		
+	}
+	
+	.avatar-unit {
+		background-image: url(/resources/icons/icon-unit@144.png);		
+	}
+}
+
+.avatar {
+	background-position: center center;
+	-webkit-border-radius: 0.5em;
+	float: left;
+	border: 0;
+	border-radius: 0.5em;
+	margin-right: 10px;
+	width: 50px;
+	height: 50px;
+	background-size: contain;
+	background-image: url(/resources/icons/icon@144.png);
+	background-repeat: none;
+	-webkit-border-radius: 0.5em;
+	-webkit-box-shadow: 0 1px 3px #999;
+
+}
+
+.calculation .avatar-hp {
+	
+}
+
+.calculation {
+	//line-height: 23px;
+	//color: #666;
+	background-image: url(../images/list-arrow.png);
+	background-repeat: no-repeat;
+	background-position: 100% 50%;
+	background-size: 10px 14px;
+	padding: 0 2em 0 0;
+	
+	.avatar {
+		width: 40px;
+		height: 40px;
+	}
+}
+.calculation-name {
+	font-weight: bold;
+	display: block;
+	min-height: 40px;
+	line-height: 40px;
+}
+.x-list-paging-msg {
+	display: none;
+}
+
+.contactInfo {
+	@include background-gradient(#eee, matte);
+	padding: 10px;
+	font-size: 90%;
+	color: #666;
+	
+	.program {
+		font-weight: bold;
+		display: block;
+		color: #000;
+		
+		a.email {			
+			background: url(/resources/images/email.png) no-repeat right center;
+			background-size: auto 16px;
+			padding-right: 27px;
+		}
+	}
+	.address {
+		font-size: 85%;
+	}
+	.city {
+		border-bottom: 1px solid #CCC;
+		padding-bottom: .5em;
+		font-size: 85%;
+	}
+	.actions {
+		clear: both;
+		float: right;
+		text-align: right;
+		margin-top: .5em;
+		
+		a.directions {			
+			background: url(/resources/images/list-arrow.png) no-repeat right center;
+			background-size: auto 14px;
+			padding-right: 15px;
+		}
+	}
+	.numbers {
+		float: left;
+		margin-top: .5em;
+		
+		span {
+			width: 35px;
+			display: inline-block;
+		}
+	}
+	a {
+		color: #000;
+		text-decoration: none;
+		font-weight: bold;
+	}
+}
+.x-map {
+    position: relative;
+
+    &:before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 999;
+        -webkit-box-shadow: inset 0 3px 3px rgba(0,0,0,.4);
+		height: 10px;
+    }
+}
+
+// Forms
+
+.x-form .x-scroll-container > .x-inner {
+	padding: 0;
+}
+.x-form-fieldset {
+	padding: 10px;
+}
+.x-form-fieldset.calc {
+	background: #0566c1 url(/resources/images/striped_bg.png) repeat-x bottom;
+	box-shadow: 0 2px 8px #999;
+}
+.x-form-fieldset .x-form-fieldset-inner {
+	border: none;
+	background: none;
+	-webkit-border-radius: 0;
+	border-radius: 0;
+}
+.x-form-fieldset .x-field {
+	font-size: 90%;
+	
+	&:first-child {
+		@include border-top-left-radius(0);
+	}
+	
+	&:last-child {
+		@include border-top-right-radius(0);
+	}
+}
+.x-form-fieldset .x-form-label {
+	color: #333;
+	text-shadow: rgba(255, 255, 255, 0.25) 0 0.08em 0;
+	padding: 0.2em 0.6em;
+	background-color: transparent;
+	border-top: none;
+	@include border-radius(0);
+}
+.calc {
+	.x-field {
+		border-bottom: none;
+		min-height: 0;
+		margin: 0 0 10px;
+	}
+	.x-form-label {
+		color: #bdddff;
+		text-shadow: rgba(255, 255, 255, 0.25);
+		font-size: 22px;
+		font-weight: bold;
+		padding: 0.1em 0.4em;
+	}
+	.x-field .x-field-input {
+		background: white;
+		border: 1px solid #001d40;
+		@include border-radius(0.4em);
+		padding: .2em .4em;
+		
+		.x-input-el {
+			padding: 0;
+			min-height: 1.5em;
+		}
+	}	
+}
+.results {
+	padding: 0 10px 10px;
+
+	.x-field {
+		min-height: 0;
+	}
+	.x-form-label {
+		color: #333;
+		text-shadow: none;
+		font-weight: bold;
+		padding: .4em;
+	}
+	.x-field .x-field-input {
+		background: none;
+		border: none;
+		padding: .4em;
+		@include border-radius(0);
+		
+		.x-input-el {
+			padding: 0;
+			min-height: 0;
+			text-align: right;
+		}
+	}	
+}
+
+// Fixes back button
+.x-button-forward::before, .x-button-forward::after, .x-button-back::before, .x-button-back::after {
+	/*top: -0.05em;*/
+}
+.x-button-back::before, .x-toolbar .x-button-back::before {
+	left: -0.67em;
+}
+.x-button-back::after, .x-toolbar .x-button-back::after {
+	left: -0.61em;
+}
+.x-button-forward::before, .x-button-forward::after, .x-button-back::before, .x-button-back::after {
+	width: 0.773em;
+	height: 1.9em;
+	top: -0.12em;
+	-webkit-mask-size: 0.773em 1.9em;
+}
+.x-button .x-button-icon.x-icon-mask {
+	-webkit-mask-repeat: no-repeat;
+}
